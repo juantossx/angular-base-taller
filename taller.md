@@ -5,7 +5,7 @@
 > **Tecnología:** Angular `21.2.7` (standalone components, signals, nuevo control flow `@for` / `@if`)
 > **Duración estimada:** 2 sesiones (≈ 4 horas)
 > **Modalidad:** Práctico guiado + entrega individual vía Pull Request
-> **Autor docente:** _ing. Alfonso Chermes_
+> **Autor docente:** _JUAN CABRALES_
 
 ---
 
@@ -412,7 +412,7 @@ La ficha debe contener un formulario con los siguientes campos enlazados con `[(
 | ------------------ | ------------------------ | --------------------- |
 | Nombre completo    | `text`                   | `nombre`              |
 | Código estudiantil | `number`                 | `codigo`              |
-| Programa académico | `select` (PBC, Ing. Sistemas, Ing. Ambiental, Derecho) | `programa` |
+| Programa académico | `select` (PBC, Ing. Informatica, Ing. Ambiental, Derecho) | `programa` |
 | Semestre (1-10)    | `range` o `number`       | `semestre`            |
 | Correo             | `email`                  | `correo`              |
 | ¿Beca Icetex?      | `checkbox`               | `tieneBeca`           |

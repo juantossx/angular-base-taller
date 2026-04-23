@@ -1,0 +1,135 @@
+/* CONTENEDOR GENERAL */
+.contenedor {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 2rem;
+    padding: 1rem;
+  }
+  
+  /* COLUMNAS */
+  .formulario,
+  .preview {
+    width: 100%;
+    max-width: 400px;
+    padding: 1.5rem;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* TITULOS */
+  h2, h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  /* LABELS */
+  label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  /* LABEl EN LINEA */
+  label.inline {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  label.inline input[type="checkbox"] {
+    width: auto;       
+    margin: 0;         
+    flex-shrink: 0;     
+  }
+  
+  /* INPUTS */
+  input, select {
+    width: 100%;
+    padding: 0.6rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  /* CHECKBOX */
+  input[type="checkbox"] {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+
+  /* COLOR PICKER */
+  .color-picker {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding: 0;
+    cursor: pointer;
+    background: none;
+  }
+  
+  /* BOTONES */
+  button {
+    margin-top: 1rem;
+    margin-right: 0.5rem;
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: 8px;
+    background: #667eea;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #5a67d8;
+  }
+  
+  button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+  .botones {
+    display: flex;
+    justify-content: center; 
+    gap: 1rem;               
+    margin-top: 1rem;
+  }
+  /* TEXTO */
+  .preview p {
+    margin: 0.3rem 0;
+  }
+  
+  /* ESTADO AVANZADO */
+  .semestre-avanzado {
+    border: 2px solid #ff0000;
+    background: #f0fff4;
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .contenedor {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  /* PARA QUE QUEDE REDONDO EL COLOR PICKER EN CUALQUIER NAVEGADOR*/
+  /* 🔥 Chrome / Edge (ESTO ES LO QUE TE FALTA) */
+  .color-picker::-webkit-color-swatch-wrapper {
+    padding: 0;
+  }
+
+  .color-picker::-webkit-color-swatch {
+    border: none;
+    border-radius: 50%;
+  }
+
+  /* 🔥 Firefox */
+  .color-picker::-moz-color-swatch {
+    border: none;
+    border-radius: 50%;
+  }

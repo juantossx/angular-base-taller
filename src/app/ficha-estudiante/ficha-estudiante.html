@@ -1,0 +1,84 @@
+<section class="contenedor">
+
+    <!-- FORMULARIO -->
+    <div class="formulario">
+      <h2>Ficha De Estudiante Unipaz</h2>
+  
+      <label>
+        Nombre:
+        <input type="text" [(ngModel)]="nombre" name="nombre">
+      </label>
+  
+      <label>
+        Código:
+        <input type="number" [(ngModel)]="codigo" name="codigo">
+      </label>
+  
+      <label>
+        Programa:
+        <select [(ngModel)]="programa" name="programa">
+          <option value="">Seleccione</option>
+          <option>PBC</option>
+          <option>Ingeniería Informática</option>
+          <option>Ingeniería Ambiental</option>
+          <option>Derecho</option>
+        </select>
+      </label>
+  
+      <label>
+        Semestre: {{ semestre }}
+        <input type="range" min="1" max="10" [(ngModel)]="semestre" name="semestre">
+      </label>
+  
+      <label>
+        Correo:
+        <input type="email" [(ngModel)]="correo" name="correo">
+        <span>{{ correo ? (correoValido() ? '✓ válido' : '✗ inválido') : '' }}</span>
+      </label>
+  
+      <label class="inline">
+        <span>¿Beca Icetex?</span>
+        <input type="checkbox" [(ngModel)]="tieneBeca" name="beca">
+      </label>
+      
+      <label class="inline">
+        <span>Color favorito:</span>
+        <input type="color" [(ngModel)]="colorFavorito" name="color" class="color-picker">
+      </label>
+    </div>
+  
+    <!-- VISTA PREVIA -->
+    @if (nombre) {
+    <div class="preview"
+         [class.semestre-avanzado]="semestre >= 7"
+         [style.color]="colorTexto()"
+         [style.backgroundColor]="colorFavorito">
+  
+      <h3>Vista Previa</h3>
+  
+      @if (nombre && programa) {
+        <p>Hola, {{ nombre }}, estudiante de {{ programa }} de Unipaz</p>
+      }
+      <p>Código: {{ codigo }}</p>
+      <p>Semestre: {{ semestre }}</p>
+      <p>{{ mensajeSemestre }}</p>
+      <p>Correo: {{ correo }}</p>
+      <p>Beca: {{ tieneBeca ? 'Sí' : 'No' }}</p>
+  
+      <p>Estado: {{ estado() }}</p>
+      <p>Guardados: {{ contadorGuardados() }}</p>
+  
+      <div class="botones">
+        <button [disabled]="!nombre || !correo" (click)="guardar()">
+          Guardar
+        </button>
+      
+        <button (click)="limpiar()">
+          Limpiar
+        </button>
+      </div>
+  
+    </div>
+    }
+  
+  </section>
