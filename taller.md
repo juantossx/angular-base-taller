@@ -518,14 +518,15 @@ git push origin taller-01/<tu-codigo>-<tu-apellido>
    - [x] Property Binding (ejemplos: ...)
    - [x] Event Binding (ejemplos: ...)
    - [x] Two-Way Binding con ngModel
-   - [ ] Bonus (si aplica)
+   - [x] Bonus (si aplica)
 
    ## Capturas de pantalla
    (arrastra aquí 1-2 imágenes de la app corriendo)
+   
 
    ## Dificultades encontradas
-   ...
-   ```
+   -Tuve mas dificultades en la parte del css con algunos inputs o los label para que quedaran como yo queria
+   -No encontre forma de subir las imagenes al .md
 6. Clic en **"Create pull request"**.
 
 ### Paso 6 — Esperar revisión
